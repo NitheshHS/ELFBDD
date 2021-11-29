@@ -35,7 +35,7 @@ public class LoginTest {
 	@When("enter email and password")
 	public void enter_email_and_password() {
 	    driver.findElement(By.id("email")).sendKeys("nitheshdemo@gmail.com");
-	    driver.findElement(By.id("passwd")).sendKeys("nithesh1998");
+	    driver.findElement(By.id("passwd")).sendKeys("password");
 	}
 
 	@When("click on sign in")
