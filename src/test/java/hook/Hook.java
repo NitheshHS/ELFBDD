@@ -33,8 +33,7 @@ public class Hook extends Base{
 		}else {
 			System.out.println("Browser name is Invalid: "+browserName);
 		}
-		base.driver.manage().window().maximize();
-		base.driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+		base.webdriverUtil.maximizeScreen(base.driver).implicitWait(base.driver, 10);
 	}
 	@After
 	public void quitBrowser(Scenario scenario) throws Throwable {
