@@ -12,7 +12,9 @@ import io.cucumber.testng.CucumberOptions;
 				"html:reports\\cucumberreports.html",
 				"json:reports\\cucumberjson.json",
 				"com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:"},
-		tags="@SmokeTest and @RegressionTest"
+		tags="@SmokeTest" //@SmokeTest and @Regression-> It will execute onlt Scenario having both tags
+		//@SmokeTest or @RegressionTest-> either smoke or regression
+		//not @SmokeTest-> exclude the tag
 		)
 public class CucumberRunner extends AbstractTestNGCucumberTests{
 /*
