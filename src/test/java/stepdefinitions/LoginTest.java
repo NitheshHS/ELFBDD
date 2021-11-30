@@ -35,7 +35,7 @@ public class LoginTest {
 	@When("enter email and password")
 	public void enter_email_and_password() {
 	    driver.findElement(By.id("email")).sendKeys("nitheshdemo@gmail.com");
-	    driver.findElement(By.id("passwd")).sendKeys("password");
+	    driver.findElement(By.id("passwd")).sendKeys("nithesh1998");
 	}
 
 	@When("click on sign in")
@@ -60,6 +60,16 @@ public class LoginTest {
 	  String errorMsg =  driver.findElement(By.xpath("//div[@class='alert alert-danger']/descendant::li[text()]")).getText();
 	  Assert.assertEquals(errorMsg, error);
 	  driver.close();
+	}
+	
+	@When("click on signIn")
+	public void click_on_sign_in1() {
+		driver.findElement(By.id("SubmitLogin")).click();
+	}
+	@Then("I should get Error message {string}")
+	public void i_should_get_error_message(String expectedErrorMsg) {
+	   String actualError= driver.findElement(By.xpath("//div[@class='alert alert-danger']/descendant::li")).getText();
+	   Assert.assertEquals(actualError, expectedErrorMsg," Error msg not matching");
 	}
 
 }

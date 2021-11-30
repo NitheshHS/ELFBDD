@@ -1,5 +1,6 @@
 Feature: Data driven testing
 
+@End2End
   Scenario Outline: As valid user I want to create multiple organization
     Given I will launch browser "chrome"
     And I will enter the url "http://localhost:8888/"

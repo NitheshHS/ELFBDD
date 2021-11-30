@@ -4,7 +4,7 @@ import java.util.List;
 import io.cucumber.datatable.DataTable;
 import io.cucumber.java.en.When;
 
-public class DataTableTest {
+public class DataTableTest{
 	@When("I want read the data from data table")
 	public void i_want_read_the_data_from_data_table(DataTable dataTable) {
 	   List<List<String>> table = dataTable.asLists();

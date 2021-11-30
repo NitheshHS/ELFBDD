@@ -1,5 +1,6 @@
 Feature: Data table
 
+	@SmokeTest
   Scenario: I want read the data from table
     
     When I want read the data from data table
