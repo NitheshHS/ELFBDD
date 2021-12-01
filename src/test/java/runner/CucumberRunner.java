@@ -4,15 +4,15 @@ import io.cucumber.testng.AbstractTestNGCucumberTests;
 import io.cucumber.testng.CucumberOptions;
 
 @CucumberOptions(
-		features = {".\\src\\test\\java\\features"},
+		features = {".\\src\\test\\java\\features\\DemoWebShopLoginPage.feature"},
 		glue = {"stepdefinitions","hook"},
 		dryRun = false,
 		monochrome = true,
 		plugin = {"pretty",
 				"html:reports\\cucumberreports.html",
 				"json:reports\\cucumberjson.json",
-				"com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:"},
-		tags="@SmokeTest" //@SmokeTest and @Regression-> It will execute onlt Scenario having both tags
+				"com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:"}
+		//tags="@SmokeTest" //@SmokeTest and @Regression-> It will execute onlt Scenario having both tags
 		//@SmokeTest or @RegressionTest-> either smoke or regression
 		//not @SmokeTest-> exclude the tag
 		)
